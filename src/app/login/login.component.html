@@ -1,14 +1,14 @@
 <div class="container">
 <div class="title">
-                Welcome To Time Portal
+                Welcome To Time Portal    <a routerLink="/home">Home</a>
             </div>
           
                 <div class="panel-body">
                 <div class="row">
                     <div class="input-field col s12">
                      <label for="userName">User Name</label>
-                        <input  id="userName" 
-                            type="text" class="validate">
+                       
+                        <input  id="userName" type="text"  [ngModel]="user.userName" required class="validate">
                        
                     </div>
                 </div>
@@ -16,13 +16,17 @@
                 <div class="row">
                     <div class="input-field col s12">
                       <label for="password">Password</label>
-                        <input  id="password" 
-                            type="password" class="validate">
                       
+                        <input  id="password" type="password"  [ngModel]="user.password" required class="validate">
                     </div>
+                     <button (click)="clicked()">Click</button>
+                      <div > 
+     
+      </div>
                 </div>
             
-                <input type="submit" name="action" value="Login"  />
+                
+
             </div>           
        
 </div>

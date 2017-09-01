@@ -1,14 +1,17 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from '../home/user.model';
 import {UserService} from '../home/user.service';
-
+import {NgModule} from "@angular/core";
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
+import {BrowserModule} from "@angular/platform-browser";
+import {FormsModule} from "@angular/forms";
 
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html'
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html'
 })
-export class LogInComponent implements OnInit {
+export class DashBoardComponent implements OnInit {
 
    user: User;
 
@@ -18,7 +21,7 @@ export class LogInComponent implements OnInit {
     
     clicked(event) {
     
-     this.userService.authUser()
+     this.userService.saveUser()
             .subscribe(user =>
                  {
                     this.user = user
@@ -27,8 +30,7 @@ export class LogInComponent implements OnInit {
             );
         
   }
-    
-
+  
     ngOnInit() {
 
     }

@@ -1,3 +1,6 @@
+import { Injectable } from '@angular/core';
+
+
 export class User {
     public userId: number;
     public userName: string;
